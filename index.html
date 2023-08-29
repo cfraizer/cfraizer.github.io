@@ -1,1 +1,457 @@
-Hello World
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<style type="text/css">p { padding-bottom: 1em; }</style>
+<link rel="stylesheet" type="text/css" href="style1.css" />
+</head>
+<body>
+<div id="content" class="content">
+
+<div id="outline-container-org069793a" class="outline-2">
+<h2 id="org069793a"><span class="section-number-2">1.</span> iterm.bash</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Download the files <a href="https://gist.github.com/cfraizer/13aaab60b2cfb314f597a857db4279e8">iterm.bash</a>.</li>
+<li><p>
+Create <code>$HOME/.bash</code> (<i>aka</i> <code>\tilde/.bash</code>) directory:
+</p>
+<pre class="example" id="org555894b">
+$ mkdir ~/.bash
+</pre></li>
+<li><p>
+Move file into that directory:
+</p>
+<pre class="example" id="org97cd143">
+$ mv ~/Downloads/iterm.bash ~/.bash/        # You could also type this as the following command
+$ # OR
+$ mv ~/Downloads/iterm.bash ~/.bash/iterm.bash
+</pre>
+<p>
+<code>mv</code> has two primary forms:
+</p>
+<ul class="org-ul">
+<li><p>
+<code>mv «src-path» «dest-path»</code>
+Which you use to move <i>and</i> rename a file like:
+</p>
+<pre class="example" id="orga904cad">
+mv ~/Downloads/iterm.txt ~/.bash/iterm.bash
+</pre>
+<p>
+If you accidentally saved it as <code>iterm.txt</code>, but want it to be named <code>iterm.bash</code>, you'd do this.
+</p></li>
+<li><p>
+<code>mv «src-path_0» «src-path_1» «... src-path_n» «dest-dir»</code>
+The last parameter to <code>mv</code> has to be a <i>directory</i> if you're moving more than one file or if you want to move the
+file, but keep the name the same.
+</p>
+<pre class="example" id="orgc0a877d">
+mv ~/Downloads/*.bash ~/.bash
+</pre>
+<p>
+This moves all the files in <code>\tilde/Downloads/</code> that end in <code>.bash</code> into the directory named <code>\tilde/.bash</code>, so if you had files in <code>\tilde/Downloads</code>
+named <code>aws.bash</code>, <code>java.bash</code>, and <code>iterm.bash</code>, it would move all of them so that their new names would be
+<code>\tilde/Downloads/aws.bash</code>, <code>\tilde/Downloads/java.bash</code>, and <code>\tilde/Downloads/iterm.bash</code>.
+</p></li>
+</ul></li>
+<li><p>
+Add a line like this to the end of your <code>.bashrc</code> file.  (The <code>rc</code> means "run commands".)
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #483d8b;">source</span> ~/.bash/iterm.bash
+</pre>
+</div>
+<p>
+which you can do by typing this command:
+</p>
+<pre class="example" id="orgc55b317">
+$ echo 'source ~/.bash/iterm.bash' &gt;&gt; ~/.bashrc
+</pre>
+<ul class="org-ul">
+<li>The <code>.bashrc</code> file is run every time you start a new instance of Bash (when you start a new terminal window or tab.)</li>
+<li>The command <code>source \tilde/.bash/iterm.bash</code> is an intstruction that tells Bash to read and execute the commands in the file
+<code>\tilde/.bash/iterm.bash</code>.</li>
+<li>The <code>echo</code> command is a Bash "built-in" command that just prints out its arguments.</li>
+<li><p>
+So if you just typed it like this
+</p>
+<pre class="example" id="org6987dce">
+$ echo 'source ~/.bash/iterm.bash'
+source ~/.bash/iterm.bash
+</pre>
+<p>
+it would just print out <code>source \tilde/.bash/iterm.bash</code>.
+</p></li>
+<li>The magic is the <code>&gt;&gt;</code> which means to take the output of the command you're typing (the <code>echo</code> command) and instead of displaying
+it, <i>append it</i> to the end of the named file (your <code>.bashrc</code> file).</li>
+</ul></li>
+</ol>
+</div>
+
+<div id="outline-container-org12638cd" class="outline-3">
+<h3 id="org12638cd"><span class="section-number-3">1.1.</span> What's in that <code>iterm.bash</code>?</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Just some Bash functions I wrote. Bash functions act like Bash built-in commandsm except they are user-defined.</li>
+</ul>
+</div>
+
+<div id="outline-container-orgb11863f" class="outline-4">
+<h4 id="orgb11863f"><span class="section-number-4">1.1.1.</span> <code>title</code></h4>
+<div class="outline-text-4" id="text-1-1-1">
+<ul class="org-ul">
+<li><p>
+Sets the title of the iterm tab so you can easily find the one you want if you have more than one. (I always do.)
+</p>
+<pre class="example" id="org54064e1">
+$ title "git related stuff for graphics class"
+</pre>
+
+<div id="org8b0a06f" class="figure">
+<p><img src="data/21/7E47E5-EA79-43CE-9044-7EB0389B3C4B/screenshot-20230829-073255.png" alt="screenshot-20230829-073255.png" />
+</p>
+</div></li>
+<li><p>
+To remove the title, just call the command with no arguments:
+</p>
+<pre class="example" id="org73ea224">
+$ title
+</pre></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge57d3b9" class="outline-4">
+<h4 id="orge57d3b9"><span class="section-number-4">1.1.2.</span> <code>tcolor</code></h4>
+<div class="outline-text-4" id="text-1-1-2">
+<ul class="org-ul">
+<li><p>
+Set the color of the tab (just the tab part at the top, not the whole window)
+</p>
+<pre class="example" id="org385b9a5">
+$ tcolor coral
+</pre>
+
+<div id="org57d640c" class="figure">
+<p><img src="data/E8/DFC1DA-67F9-4D95-BB66-1C3A6D679172/screenshot-20230829-073508.png" alt="screenshot-20230829-073508.png" />
+</p>
+</div></li>
+<li><p>
+You can use <i>completion</i> to fill in the color names.
+If you type
+</p>
+<pre class="example" id="org3a28c2f">
+$ tcolor co&lt;TAB&gt;
+</pre>
+<p>
+it will become
+</p>
+<pre class="example" id="org0ac05a9">
+$ tcolor cor
+</pre>
+<p>
+because all the colors that start with <code>"co"</code> also start with <code>"cor"</code> .
+If you press <code>\lt{}TAB\gt</code> again twice, it will show the possible completions, then re-display the command you're typing.:
+</p>
+<pre class="example" id="org463dcbe">
+$ tcolor cor&lt;TAB&gt;&lt;TAB&gt;
+coral           cornflowerblue  cornsilk
+~$ tcolor cor
+</pre>
+<p>
+which tells you the possible colors starting with <code>"cor"</code> are <code>coral</code>, <code>cornflowerblue</code>, and <code>cornsilk</code>.
+So, if you add <code>"nf"</code> after that <code>"cor"</code> then press <code>\lt{}TAB\gt</code> it will complete it:
+</p>
+<pre class="example" id="orgb5265ea">
+$ tcolor cornfl&lt;TAB&gt; # becomes…
+$ tcolor cornflowerblue
+</pre>
+<p>
+so you can just press &lt;RETURN&gt; to enter the command.
+<img src="data/E8/DFC1DA-67F9-4D95-BB66-1C3A6D679172/screenshot-20230829-074608.png" alt="screenshot-20230829-074608.png" />
+</p></li>
+<li><p>
+To reset the color to the default:
+</p>
+<pre class="example" id="orgdae4f05">
+$ tcolor -r
+</pre></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org81225af" class="outline-4">
+<h4 id="org81225af"><span class="section-number-4">1.1.3.</span> <code>bcolor</code></h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li><p>
+Sets the background color of the entire tab.
+</p>
+<pre class="example" id="org53c8c19">
+$ bcolor tomato
+</pre>
+
+<div id="orgc11d55f" class="figure">
+<p><img src="data/76/2FF559-FCDC-4A68-A53D-E15F10208EFC/screenshot-20230829-074754.png" alt="screenshot-20230829-074754.png" />
+</p>
+</div></li>
+<li><p>
+To reset to the default:
+</p>
+<pre class="example" id="orgf16ce80">
+$ bcolor -r
+</pre></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4132650" class="outline-4">
+<h4 id="org4132650"><span class="section-number-4">1.1.4.</span> <code>html_colors</code></h4>
+<div class="outline-text-4" id="text-1-1-4">
+<ul class="org-ul">
+<li><p>
+Shows a list of named colors, their associated hex values, and a sample swatch:
+</p>
+<pre class="example" id="orgae05eb2">
+$ html_colors
+</pre>
+
+<div id="org0bc289a" class="figure">
+<p><img src="data/AA/CAB14E-02F4-4684-86BD-15C12093D5B2/screenshot-20230829-074946.png" alt="screenshot-20230829-074946.png" />
+</p>
+</div></li>
+<li><p>
+You can change the number of columns with the <code>-c flag</code>
+</p>
+<pre class="example" id="org80db47e">
+$ html_colors -c 2
+</pre>
+
+<div id="orge379ff0" class="figure">
+<p><img src="data/AA/CAB14E-02F4-4684-86BD-15C12093D5B2/screenshot-20230829-075052.png" alt="screenshot-20230829-075052.png" />
+</p>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8063610" class="outline-4">
+<h4 id="org8063610"><span class="section-number-4">1.1.5.</span> <code>ttb</code></h4>
+<div class="outline-text-4" id="text-1-1-5">
+<ul class="org-ul">
+<li><p>
+Set the tab title and "badge"—a translucent label that appears in the background of the tab window itself.
+</p>
+<pre class="example" id="org03febef">
+$ ttb "Git Stuff"
+</pre>
+
+<div id="org7d69a5d" class="figure">
+<p><img src="data/02/AF7E7C-35DC-4AFC-A8EE-1DC97AEF6EF8/screenshot-20230829-075245.png" alt="screenshot-20230829-075245.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>So, that string "Git Stuff" appears in the tab title, but also in that
+red translucent text inside the window so you don't accidentally
+type your <code>git</code> commands in the wrong window.</li>
+</ul></li>
+<li><p>
+You can remove it with
+</p>
+<pre class="example" id="org61f9a63">
+$ ttb -r
+</pre></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
